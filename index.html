@@ -2,7 +2,7 @@
 <html>
 
   <head>
-	<meta name="generator" content="Hugo 0.53" />
+	<meta name="generator" content="Hugo 0.54.0" />
 
   <title>
       
@@ -22,6 +22,67 @@
 
 	
 	
+      <div class="h-entry">
+		
+			<h1><a href="https://microblog.annard.net/2021/03/09/and-now-for.html">And now for something completely different</a></h1>
+		
+
+        <a href="https://microblog.annard.net/2021/03/09/and-now-for.html" class="u-url"><time class="dt-published" datetime="2021-03-09 11:17:53 &#43;0000">Mar 9, 2021</time></a>
+
+        <div class="e-content">
+         	<p>Just something I found on the <a href="https://www.irishtimes.com">Irish Times</a> website and gives <a href="https://www.irishtimes.com/news/ireland/irish-news/poolbeg-chimneys-may-have-to-be-encased-in-fibreglass-says-council-1.4504591">a nice view</a> of where I currently reside.</p>
+
+        </div>
+      </div>
+    
+      <div class="h-entry">
+		
+			<h1><a href="https://microblog.annard.net/2021/02/28/software-defined-radio.html">Software Defined Radio and Windows on a Mac</a></h1>
+		
+
+        <a href="https://microblog.annard.net/2021/02/28/software-defined-radio.html" class="u-url"><time class="dt-published" datetime="2021-02-28 22:21:14 &#43;0000">Feb 28, 2021</time></a>
+
+        <div class="e-content">
+         	<p>As part of my plan to make some of the radio amateur band more accessible to me on the boat I have bought an <a href="https://www.sdrplay.com/rspduo/">SDRPlay RSPDuo</a>. I receive a lot of <a href="https://en.wikipedia.org/wiki/Q_code#Q-codes_as_adapted_for_use_in_amateur_radio">QRM</a> on the 40m band on my boat in the evening and given the fact that I can&rsquo;t move anywhere nor can I drastically change my antenna situation I&rsquo;m working on a plan using something called <a href="https://www.w8ji.com/polarization_and_diversity.htm">diversity radio</a>. But that I will discuss in another article once I get closer to achieving that goal.</p>
+
+<p>First I wanted to use the fantastic <a href="https://www.youtube.com/watch?v=o6R5qAeQQug">SDRuno software</a> that at the moment only runs on Windows. As I have given up on my principles of using only Mac software a while ago, I&rsquo;d thought getting it to work with my copy of VMWare Fusion 10 should be a no-brainer. Well&hellip;</p>
+
+<h3>Hardware</h3>
+
+<p>A MacBook Pro 2015 with 16GB RAM and a 2.5 GHz Intel Core i7 running macOS 10.14.6. So plenty of power to share with Windows.
+I also have a Windows 10 Home licence (although its activation keeps complaining but I bought an official USB stick with Windows dammit!).
+I decided to give Windows 4GB RAM and 4 virtual processors.</p>
+
+<h3>VMWare Fusion 10</h3>
+
+<p>The first thing we have to understand that if you sample 10MHz of radio spectrum at 14 bits, we are talking about a lot of data that needs to be transferred from the device to your Mac and then to Windows. At least 133MB/s of continuous data transfer over a USB bus! SDRUno uses a cool feature of USB to help with that, it&rsquo;s called <a href="https://beyondlogic.org/usbnutshell/usb4.shtml#Isochronous">i-synchronous transfers</a>. I now the Mac can handle this since I connected it to a DAC for hifi audio and that worked fine when I still had access to hifi in the dark days before the boat. But that&rsquo;s where it went wrong because USB support is not easy in a VM environment since VMWare announced full USB3 support for the latest version Fusion 12. So I noticed that I could switch to bulk transfer in SDRUno but that was not great. I noticed a less than stellar performance. SDRUno would complain that the USB device suddenly disappeared and multi-tasking between Mac and Windows caused this to happen frequently.</p>
+
+<h3>VirtualBox 6.1</h3>
+
+<p>Since I tried not to spend another amount of money to upgrade VMWare Fusion I tried VirtualBox. This was a terrible experience both the UI and the data transfer suffered from lots of lag and hick-ups as it only supported USB bulk transfer.</p>
+
+<h3>VMWare Fusion 11</h3>
+
+<p>On my Mac I still use macOS 10.14 since the later OS versions are taking more and more control away from you and a lot of ham radio software doesn&rsquo;t work properly. Thus I tried Fusion 11 as that is the latest supported release for my setup. I contacted VMware and I could purchase a licence for 12 and downgrade it to 11 if I have to.
+So I tried it with the demo version. It did support i-synchronous transfers but again it was not stable enough. Lots of times SDRuno complained the USB device disappeared and whilst decoding <a href="https://en.wikipedia.org/wiki/Digital_Audio_Broadcasting">DAB</a> it would just crash.</p>
+
+<h3>VMWare Fusion 12</h3>
+
+<p>I managed to borrow an even more powerful MacBook Pro running macOS 15 and I put Fusion 12 on it. Tried SDRUno again and it worked. DAB decoding worked as well. So that looked promising. But when I went to do some Mac work whilst listening to a DAB transmission it would fail again. So I was running out of options bar one.</p>
+
+<h3>Parallels Desktop</h3>
+
+<p>For some reason I didn&rsquo;t consider <a href="https://www.parallels.com/">Parallels Desktop</a>. Looking at the price it seemed similar to a Fusion upgrade so that wouldn&rsquo;t stop me.
+What I liked is that as soon as I started it it started downloading Windows and installed it for me. With Fusion and VirtualBox you have to do all of that manually. The other good thing is that it can pass the discrete GPU to Windows as well which SDRUno can use. So from the get-go it worked fine. Listening to DAB and doing all kinds of stuff on the Mac worked reliably. Sometimes you can hear drop-outs but it doesn&rsquo;t crash nor make the USB device disappear. The only issue is that if you Mac goes to sleep and wakes up again you&rsquo;ll use your USB device and have to restart SDRUno. It would be great it they could dynamically reconnect.
+You can also use Coherence mode which allows you to mix Windows and Mac windows in the same session as shown in the screenshot below.</p>
+
+<p>So with this setup and I have listened many hours to my RSPDuo and it is an amazing piece of kit. I hope to write some more articles about my experiences with this radio and its software. I have lots of ideas and thanks to COVID lots of time to work on it as well.</p>
+
+<p><img style="display:block; margin-left:auto; margin-right:auto;" src="https://microblog.annard.net/uploads/2021/eb14dc5735.png" alt="SDRUno on Mac" title="SDRUno on Mac.png" border="0" width="1680" height="1050" /></p>
+
+        </div>
+      </div>
+    
       <div class="h-entry">
 		
 			<h1><a href="https://microblog.annard.net/2021/01/29/sstv-reception-from.html">SSTV reception from the International Space Station</a></h1>
