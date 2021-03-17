@@ -7,6 +7,15 @@
 	"items": [
 		
 			{
+				"id": "http://annard.micro.blog/2021/03/17/followup-on-sdr.html",
+				"title": "Follow-up on SDR and WIndows on macOS",
+				"content_html": "<p>As you can see in the thread on groups.io, I still had hickups when I was really taxing the USB port on the mac whilst passing it to SDRUno on WIndows.</p>\n",
+				"content_text": "As you can see in the thread on groups.io, I still had hickups when I was really taxing the USB port on the mac whilst passing it to SDRUno on WIndows.\n",
+				"date_published": "2021-03-17T22:21:20+00:00",
+				"url": "https://microblog.annard.net/2021/03/17/followup-on-sdr.html",
+				"tags": ["ham radio"]
+			},
+			{
 				"id": "http://annard.micro.blog/2021/03/09/and-now-for.html",
 				"title": "And now for something completely different",
 				"content_html": "<p>Just something I found on the <a href=\"https://www.irishtimes.com\">Irish Times</a> website and gives <a href=\"https://www.irishtimes.com/news/ireland/irish-news/poolbeg-chimneys-may-have-to-be-encased-in-fibreglass-says-council-1.4504591\">a nice view</a> of where I currently reside.</p>\n",
