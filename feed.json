@@ -7,6 +7,15 @@
 	"items": [
 		
 			{
+				"id": "http://annard.micro.blog/2021/09/02/using-the-standing.html",
+				"title": "Using the standing rigging as antenna (part 1)",
+				"content_html": "<p>So, I have had a few stories about antennas and although I have been making some FT8 contacts with the little sprit on the back of the boat, it is not the best antenna. If you look at my boat there is a long metal wire almost going to the top of the mast. Some boats use that with the <a href=\"https://www.lijnenspecialist.nl/insulator-swage-stud-each-side\">aid of insulators</a> to create an antenna. But these are quite expensive. In any case you&rsquo;d need an <a href=\"https://en.wikipedia.org/wiki/Antenna_tuner\">antenna tuner</a> to make the antenna work with your transmitter. However as I did some research, one boat owner didn&rsquo;t bother with the insulators and discovered that a modern antenna tuner can tune the complete rigging!\nSo when I got a discount on the <a href=\"http://www.cgantenna.be/product_cg3000.html\">CG-3000 antenna tuner</a> at Wimo, I decided to jump on it and hopefully improve the antenna situation on the boat.</p>\n",
+				"content_text": "So, I have had a few stories about antennas and although I have been making some FT8 contacts with the little sprit on the back of the boat, it is not the best antenna. If you look at my boat there is a long metal wire almost going to the top of the mast. Some boats use that with the <a href=\"https://www.lijnenspecialist.nl/insulator-swage-stud-each-side\">aid of insulators</a> to create an antenna. But these are quite expensive. In any case you'd need an <a href=\"https://en.wikipedia.org/wiki/Antenna_tuner\">antenna tuner</a> to make the antenna work with your transmitter. However as I did some research, one boat owner didn't bother with the insulators and discovered that a modern antenna tuner can tune the complete rigging!\nSo when I got a discount on the <a href=\"http://www.cgantenna.be/product_cg3000.html\">CG-3000 antenna tuner</a> at Wimo, I decided to jump on it and hopefully improve the antenna situation on the boat.\n",
+				"date_published": "2021-09-02T22:00:25+00:00",
+				"url": "https://microblog.annard.net/2021/09/02/using-the-standing.html",
+				"tags": ["ham radio"]
+			},
+			{
 				"id": "http://annard.micro.blog/2021/03/17/followup-on-sdr.html",
 				"title": "Follow-up on SDR and WIndows on macOS",
 				"content_html": "<p>As you can see in the thread on groups.io, I still had hickups when I was really taxing the USB port on the mac whilst passing it to SDRUno on WIndows.</p>\n",
